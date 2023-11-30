@@ -3,6 +3,7 @@ Joshy.Name = "Joshy"
 Joshy.ResetOnSpawn = false
 Joshy.ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
 Joshy.IgnoreGuiInset = true
+Joshy.Parent = game.Players.LocalPlayer.PlayerGui
 
 local Image = Instance.new("ImageLabel")
 Image.Name = "Image"
@@ -20,9 +21,7 @@ Sound.Volume = 2
 Sound.SoundId = "rbxassetid://15502249681"
 Sound.Parent = Joshy
 
-repeat task.wait() until Image.IsLoaded == true
-
-Joshy.Parent = game.Players.LocalPlayer.PlayerGui
+repeat task.wait() until Image.IsLoaded == true and Sound.IsLoaded == true
 
 Sound:Play()
 
